@@ -98,6 +98,15 @@ const hasPartyInvation = true
 console.log(`Пойду ли я на вечеринку: ${isWeekend || hasPartyInvation ?"Да" : "Нет"} `);
 
 
+// Задание №4 Оператор Нулевого Слияния
+
+const username = null
+console.log(username ?? "Гость" );
+
+const ueserAge = undefined
+console.log( ueserAge ?? 18 );
+
+
 
 
 
