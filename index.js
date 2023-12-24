@@ -1,207 +1,260 @@
-// Дз№2
+//Массивы ДЗ
+// Задание №1 без использовани функции
+// задача 1
+const numbers = [1,2,3,4,5]
+// задача 2
+console.log(numbers[2]);
 
-// Задание №1 Switch case
+// задача 3
+console.log(numbers.length);
 
-const dayOfWeek = 1
+//,задача 4
+numbers [1] = 10
+console.log(numbers);
 
-switch (dayOfWeek) {
-    case 1 : console.log("Понедельник");
-    break;
-    case 2 : console.log("Вторник");
-    break;
-    case 3 : console.log("Среда");
-    break;
-    case 4 : console.log("Четверг");
-    break;
-    case 5 : console.log("Пятница");
-    break;   
-    case 6 : console.log("Суббота");
-    break;  
-    case 7 : console.log("Воскресенье");
-    break;
-    default:console.log("Такого дня недели нет");
+// задача 5
+const newNumber = numbers. push ("six");
+console.log(numbers);
+
+//задача 6
+firstDestroyЕlement = numbers. shift ();
+console.log(numbers);
+  
+//задача 7
+indexNumber4 = numbers.indexOf(4)
+console.log(indexNumber4);
+
+//задача 8
+checkfive = numbers.includes("five")
+console.log(checkfive); 
+
+//задача 9
+const numbers2 = [2,3,4]
+console.log(numbers2);
+
+//задача 10
+const conjugateNumbers = numbers. concat (numbers2)
+console.log(conjugateNumbers);
+
+
+//задача 11
+const deletingTheLast = conjugateNumbers.pop()
+console.log(conjugateNumbers);
+
+//задача 12
+conjugateNumbers.reverse()
+console.log(conjugateNumbers);
+
+// задача 13
+const roles = ["admin","user","superUser"]
+rolesJoin = roles.join("-")
+console.log(rolesJoin);
+
+//задача 14
+//const fruits = ['apple,orange,banana']
+//const fruitsSplit = fruits.split(',')
+//console.log(fruitsSplit)
+
+//задача 15
+const numerics = ["1","2","3","4",]
+const numercisPlus0 = numerics.unshift("0")
+console.log(numerics);
+
+
+// Задание №1 с использованием функции
+
+// задача 1
+function arrayOutput (massivNumbers,massivNumbers2,massivNumbers3,massivNumbers4) {
+const array = [massivNumbers,massivNumbers2,massivNumbers3,massivNumbers4]
+return array.toString()
+}
+console.log(arrayOutput (2,3,4,5));
+
+ // задача 2
+ function arrayDisplayIndex (index) {
+ const array2 = ["user", "admin", "super-user",]
+const elemenеСontent = array2[index] 
+return elemenеСontent
+}
+console.log(arrayDisplayIndex (1));
+
+// задача 3
+function checkLenght (massiveCheckout)  
+{
+return massiveCheckout.length
+}
+console.log(checkLenght([1,2,3,4]))
+
+// задача 4
+function addingElement (replacementNumber,newElement) {
+    const array4 = ["", "", "",]
+    const newElementarray4 = array4[replacementNumber] = newElement
+    return array4
+}
+console.log(addingElement(1,"element"));
+
+// задача 5
+function newElementEnd (ElementEnd) {
+    const array5 = ["","","",]
+    const createNewElement = array5.push(ElementEnd)
+    return array5
 }
 
-const month = 1
+console.log(newElementEnd(5));
 
-switch (month) {
-case 1 : console.log("Зима");
-break;
-case 2 : console.log("Зима");
-break;
-case 3 : console.log("Весна");
-break;
-case 4 : console.log("Весна");
-break;
-case 5 : console.log("Весна");
-break;   
-case 6 : console.log("Лето");
-break; 
-
-case 7 : console.log("Лето");
-break;
-
-case 8 : console.log("Лето");
-break;
-
-case 9 : console.log("Осень");
-break;
-
-case 10 : console.log("Осень");
-break; 
-
-case 11 : console.log("Осень");
-break;
-
-case 12 : console.log("Зима");
-break;
-
-default:console.log("Такого месяца нет");
+// задача 7
+function elementDelited (element) {
+    let aray7 = [1, 2, 6, 7, 3]
+   const appearanceIndex = aray7.indexOf(element)
+    return appearanceIndex 
 }
+console.log(elementDelited(1));
 
-// Задание №2 Тернарный оператор
-
-const isRaning = "Идёт дождь"
-
-const dry = "Cухо"
-
-const decision = isRaning === isRaning ? "Идёт дождь" :"Cухо"
-console.log(decision)
-
-const score = 40
-
-const gradeA = score >= 80 ? "Оценка A" : "" 
-console.log(gradeA);
-
-const gradeB = 80 > score && score >= 60 ? "Оценка B" : ""
-console.log(gradeB);
-
-const gradeC = 60 > score &&  score >= 40 ? "Оценка C" : ""
-console.log(gradeC);
-
-const gradeD = 40 > score && score >= 20 ? "Оценка D" : ""
-console.log(gradeD);
-
-const gradeF = 20 > score && score >= 0 ? "Оценка F " : ""
-console.log(gradeF);
-
-// Задание №3 Булевая логика
-
-const hasMoney = true
-const isHungry = true
-
-console.log(`Пойду ли я в ресторан: ${hasMoney && isHungry ?"Да" : "Нет"} `);
-
-const isWeekend = true
-const hasPartyInvation = true
-
-console.log(`Пойду ли я на вечеринку: ${isWeekend || hasPartyInvation ?"Да" : "Нет"} `);
-
-
-// Задание №4 Оператор Нулевого Слияния
-
-const username = null
-console.log(username ?? "Гость" );
-
-const ueserAge = undefined
-console.log( ueserAge ?? 18 );
-
-//Задачи разные
-
-//Задача №1
-const grade = "A"
-
-switch (grade) {
-    case "A":console.log("Оценка 5");
-        break;
-        case "B":console.log("Оценка 4");
-        break;
-        case "C":console.log("Оценка 3");
-        break;
-        case "D":console.log("Оценка 2");
-        break;
-        case "F":console.log("Оценка 1");
-        break;
-        default: console.log("Такой оценки нет");
+// задача 8
+function elementCheck (verifiable) {
+    let aray8 = [1, 2, 6, 7, 3]
+    const verifiableElement = aray8.indexOf(verifiable)
+   const check = verifiableElement === -1 ?console.log("Такого элемента нет"):console.log("Такой элемент есть"); 
+    return check
 }
+console.log(elementCheck(3));
 
-
-//Задача №2
-const num1 = 1 
-const num2 = 2
-console.log(num2 > num1 ?"num2 больше": "num1 больше или равен");
-
-//Задача №3
-
-
-
-//Задача №4
-
-const isAdault = true 
-console.log( isAdault === true ?"Вам разрешено":"Вам запрещено");
-
-//Задача №5
-
-const temperature = 10
-
-switch (true) 
-{ case temperature <= 0: console.log("Зима");
-break
-case temperature >= 1 && temperature < 10 : console.log("Осень");
-break
-case temperature >= 10 && temperature <= 19 : console.log("Весна");
-break
-case temperature >= 20 && temperature <= 30 : console.log("Лето");
-break
-default: console.log("Давно не было такой температуры");
+// задача 9
+function sliceInterval (aray9, startindex,endindex) {
+    const interval = aray9.slice(startindex,endindex)
+    return interval
 }
+console.log(sliceInterval([0,1,2,3,4,5,6],2,5));
 
-//Задача №6
-
-const isLoggedIn = true ?"Пользователь зашёл" :null
-console.log(isLoggedIn ?? "Гость" ) ;
-
-//Задача №7
-
-const isEvening = true
-const hasGuests = false
-
-const answerGuests = isEvening && hasGuests ?"Останусь" : "Не останусь"
-
-console.log(`Останусь ли я дома? ${answerGuests}`);
-
-//Задача №8
-
-const hasPermission = true
-const isPaid = true
-
-const answerAccess = hasPermission || isPaid ?" есть доступ" : " нет доступа"
-
-console.log(`Отсуствие или присудствие доступа: ${answerAccess}`);
-
-//Задача №9
-const userRole = "admin"
-const isAdmin = true
-switch (userRole) {
-case "admin": console.log(userRole && isAdmin ?"Админстратор" : "Нет прав администратора");
-break
-case "moder": console.log(!isAdmin && userRole && "Модератор");
-break
-case "user": console.log(!isAdmin && userRole && "Пользователь");
-break
+//Задача 10
+function compoundAray (array9,array10) {
+return array9.concat(array10)
 }
+console.log(compoundAray([1,2,3,4],[5,6,7,8]));
 
-//Задача №10
-const isMorniiing = true
-const isWeeeekend = true
-console.log(isMorniiing && !isWeeeekend?"Вставать нужно":"Вставать не нужно");
+//Задача 11
+function deletingLast (array11) {
+array11.pop()
+return array11
+}
+console.log(deletingLast([1,2,3]));
 
-//Задача №11
-const isAllowed = true
+//Задача 12
+function reverseArray (array12) {
+return array12.reverse()
+}
+console.log(reverseArray([1,2,3]));
 
-const isExpired = false
+//Задача 13
+function transformationsString(array13) {
+return array13.join("-")
+}
+console.log(transformationsString([1,2,3,4]));
 
-const TicketUseResponse = isAllowed && isExpired ?"Разрешено":"Не Разрешено"
-console.log(`Разрешено ли исползовать билет:${TicketUseResponse}`);
+//Задача 14
+//function separationElements(array14) {
+//const separationArray = array14.split(',')
+//return separationArray
+//}
+//console.log(separationElements(['function,const,console']));
+
+//Задача 15
+function addingNewElement (array15,newElement) {
+array15.unshift(newElement)
+return array15
+}
+console.log(addingNewElement([2,3,4,5],2));
+
+// Задание №2 без использовани функции
+
+//Задача 1
+const array16 = [1,2,3,4,5,6,7,8,9,10]
+const deletingTwoElement = array16.slice(2)
+console.log(deletingTwoElement);
+
+//Задача 2
+const array17 = [2,4,6,8,10]
+const array17OneToThree =array17.slice(1,3)
+console.log(array17OneToThree);
+
+//задача 3
+const array18 = [1,2,3,4,5,6,7,8,9,10]
+const array18Splice = array18.splice(1,2)
+console.log(array18);
+
+//задача 4
+const array19 = [1,2,3,4,5,6,7,8,9,10]
+const array19Clone = array19.concat(array19)
+console.log(array19Clone);
+
+//задача 5
+const array20 = [1,2,3,4,5,6,7,8,9,10]
+const array20ЬissingLast = array20.slice(0,9)
+console.log(array20ЬissingLast);
+
+//задача 6
+const array21 = [1,2,3,4,5,6,7,8,9,10]
+const array21Splice = array21.splice(6,0,20)
+console.log(array21);
+
+//задача 7
+const array22 = [1,2,3,4,5,6,7,8,9,10]
+const array23 = [11,12,13,14,15,16,17,18,19,20]
+const array22Concat = array22.concat(array23)
+const array22ConcatFirstElement = array22Concat
+
+//Задача 8
+const array24 = [1,2,3,4,5,6,7,8,9,10]
+const array24MoreTwoDelited = array24.splice(0,2)
+console.log(array24MoreTwoDelited);
+
+// Задание №2 с использованием функции
+
+//Задача 1
+function removingFirstTwo(array) {
+array.splice(0,2)
+return array
+}
+console.log(removingFirstTwo([1,2,3,4,5,6,7,8,9,10]));
+    
+//Задача 2
+function evenArray (array) {
+    function evenFilter (numb) {
+     const evenFilterValues = numb % 2 === 0 
+     return evenFilterValues
+    } 
+  return  array.filter(evenFilter)
+}
+console.log(evenArray([1,2,3,4,5,6,7,8,9,10]));
+
+//Задача 3
+function threeElement (array) {
+    return array.slice(0,3)
+}
+console.log(threeElement([1,2,3,4,5,6,7,8,9,10]));
+
+//Задача 5
+function union (array) {
+  return array.concat(array)  
+}
+console.log(union([1,2]));
+
+//Задача 6
+function ExceptLast (array) {
+return array.slice(0,array.length-1)
+}
+console.log(ExceptLast([1,2,3,4,5,6,7,8,9]));
+
+//Задача 8
+function concatTwoArrays (array,array1) {
+    return array.concat(array1)
+}
+console.log(concatTwoArrays ([1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9]));
+
+//Задача 9
+function deleteIndexGreaterThanTwoParams (array) {
+    return array.splice(0,2)
+}
+ console.log(deleteIndexGreaterThanTwoParams([1,2,3,4,5,6,7,8,9,10]));   
 
 
